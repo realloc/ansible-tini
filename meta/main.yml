@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: Stanislav Bogatyrev <realloc@realloc.spb.ru>
+  description: Ensures tini init is installed. Use it for Docker images.
+  license: GPLv3
+  min_ansible_version: 2.0.0
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: opensuse
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+
+  categories:
+    - system
+    - packaging
+    - cloud    
+
+dependencies: []

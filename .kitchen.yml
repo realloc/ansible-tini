@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  hosts: localhost
+  ansible_verbosity: 2
+  ansible_verbose: true
+  roles_path: ../realloc.tini/
+  require_ansible_repo: true
+  require_chef_omnibus: false
+  require_ansible_omnibus: false
+  require_chef_for_busser: false
+  require_ruby_for_busser: true
+  ansible_omnibus_url: https://raw.githubusercontent.com/neillturner/omnibus-ansible/master/ansible_install.sh
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      box: bento/ubuntu-14.04
+
+verifier:
+  ruby_bindir: '/usr/bin'
+
+suites:
+  - name: default
+    provisioner:
+      name: ansible_playbook
+      playbook: tests/test.yml
