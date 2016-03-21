@@ -9,4 +9,5 @@
   get_url:
     url: "{{ tini_binary_url }}"
     dest: "{{ tini_path }}"
+    validate_certs: "{{ tini_validate_certs }}"
     mode: 0755
