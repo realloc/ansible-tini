@@ -1,2 +1,4 @@
 ---
-# defaults file for realloc.tini
+
+tini_version: v0.9.0
+tini_path: /sbin/tini

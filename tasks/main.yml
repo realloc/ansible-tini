@@ -1,2 +1,12 @@
 ---
-# tasks file for realloc.tini
+
+- name: Define tini url
+  set_fact:
+    tini_binary_url: "https://github.com/krallin/tini/releases/download/{{ tini_version }}/tini-static"
+  when: tini_binary_url is not defined
+
+- name: Download tini binary
+  get_url:
+    url: "{{ tini_binary_url }}"
+    dest: "{{ tini_path }}"
+    mode: 0755
