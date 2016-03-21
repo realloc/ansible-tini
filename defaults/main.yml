@@ -2,3 +2,4 @@
 
 tini_version: v0.9.0
 tini_path: /sbin/tini
+tini_validate_certs: yes
